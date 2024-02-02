@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{A07CA598-D54
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B92A6BAD-7D83-451E-9D97-8C8C1FD0E7D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleCRUD.Domain", "src\Core\SampleCRUD.Domain\SampleCRUD.Domain.csproj", "{1929BA54-0C12-4565-AFAE-916ACF27A9BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleCRUD.Domain", "src\Core\SampleCRUD.Domain\SampleCRUD.Domain.csproj", "{1929BA54-0C12-4565-AFAE-916ACF27A9BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleCRUD.Persistence", "src\Infrastructure\SampleCRUD.Persistence\SampleCRUD.Persistence.csproj", "{38664129-9F99-497D-B2EA-E2DE4FE4D2F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{1929BA54-0C12-4565-AFAE-916ACF27A9BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1929BA54-0C12-4565-AFAE-916ACF27A9BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1929BA54-0C12-4565-AFAE-916ACF27A9BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38664129-9F99-497D-B2EA-E2DE4FE4D2F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38664129-9F99-497D-B2EA-E2DE4FE4D2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38664129-9F99-497D-B2EA-E2DE4FE4D2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38664129-9F99-497D-B2EA-E2DE4FE4D2F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 		{A07CA598-D54B-4E27-BA5F-A87889F99338} = {35F3900A-2BA3-4030-9BBC-AF209CB4EE01}
 		{B92A6BAD-7D83-451E-9D97-8C8C1FD0E7D9} = {35F3900A-2BA3-4030-9BBC-AF209CB4EE01}
 		{1929BA54-0C12-4565-AFAE-916ACF27A9BE} = {CAD0FC9A-D3CD-49E4-AB57-CC7890B71418}
+		{38664129-9F99-497D-B2EA-E2DE4FE4D2F8} = {B92A6BAD-7D83-451E-9D97-8C8C1FD0E7D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3B66FA02-A813-4967-A294-45BAEB9E3B27}
