@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleCRUD.Domain", "src\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleCRUD.Persistence", "src\Infrastructure\SampleCRUD.Persistence\SampleCRUD.Persistence.csproj", "{38664129-9F99-497D-B2EA-E2DE4FE4D2F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleCRUD.API", "src\API\SampleCRUD.API\SampleCRUD.API.csproj", "{1DE5B4CF-B942-4CAC-B2BA-6C2EC27AF983}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{38664129-9F99-497D-B2EA-E2DE4FE4D2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38664129-9F99-497D-B2EA-E2DE4FE4D2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38664129-9F99-497D-B2EA-E2DE4FE4D2F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE5B4CF-B942-4CAC-B2BA-6C2EC27AF983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE5B4CF-B942-4CAC-B2BA-6C2EC27AF983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE5B4CF-B942-4CAC-B2BA-6C2EC27AF983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE5B4CF-B942-4CAC-B2BA-6C2EC27AF983}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{B92A6BAD-7D83-451E-9D97-8C8C1FD0E7D9} = {35F3900A-2BA3-4030-9BBC-AF209CB4EE01}
 		{1929BA54-0C12-4565-AFAE-916ACF27A9BE} = {CAD0FC9A-D3CD-49E4-AB57-CC7890B71418}
 		{38664129-9F99-497D-B2EA-E2DE4FE4D2F8} = {B92A6BAD-7D83-451E-9D97-8C8C1FD0E7D9}
+		{1DE5B4CF-B942-4CAC-B2BA-6C2EC27AF983} = {A07CA598-D54B-4E27-BA5F-A87889F99338}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3B66FA02-A813-4967-A294-45BAEB9E3B27}
