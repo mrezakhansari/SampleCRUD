@@ -1,5 +1,7 @@
+using Microsoft.EntityFrameworkCore;
 using SampleCRUD.API;
 using SampleCRUD.Persistence;
+using SampleCRUD.Persistence.DatabaseContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,16 @@ builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddApiServices();
 
 var app = builder.Build();
+
+using (var serviceScope = app.Services.CreateScope())
+{
+    var context = serviceScope.ServiceProvider.GetService<SampleCRUDDatabaseContext>();
+    if (context != null)
+    {
+        await context.Database.MigrateAsync();
+        await context.Database.EnsureCreatedAsync();
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
