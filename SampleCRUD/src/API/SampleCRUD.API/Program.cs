@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SampleCRUD.API;
+using SampleCRUD.Identity;
+using SampleCRUD.Identity.DbContext;
 using SampleCRUD.Persistence;
 using SampleCRUD.Persistence.DatabaseContext;
 
@@ -13,6 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.AddApiServices();
 
 var app = builder.Build();
@@ -24,6 +27,12 @@ using (var serviceScope = app.Services.CreateScope())
     {
         await context.Database.MigrateAsync();
         await context.Database.EnsureCreatedAsync();
+    }
+    var contextIdentity = serviceScope.ServiceProvider.GetService<SampleCRUDIdentityDbContext>();
+    if (contextIdentity != null)
+    {
+        await contextIdentity.Database.MigrateAsync();
+        await contextIdentity.Database.EnsureCreatedAsync();
     }
 }
 
