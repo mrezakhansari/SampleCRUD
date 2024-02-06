@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SampleCRUD.Domain;
 using SampleCRUD.Persistence.DatabaseContext;
 
 namespace SampleCRUD.Persistence;
@@ -13,6 +14,9 @@ public static class PersistenceServiceRegistration
         {
             options.UseSqlServer(configuration.GetConnectionString("SampleCRUDConnectionString"));
         });
+
+        services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
         return services;
     }
 }

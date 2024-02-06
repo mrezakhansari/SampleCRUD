@@ -1,12 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SampleCRUD.Domain;
+using SampleCRUD.Identity.Services;
 
 namespace SampleCRUD.Persistence.DatabaseContext;
 
 public class SampleCRUDDatabaseContext : DbContext
-{ 
-    public SampleCRUDDatabaseContext(DbContextOptions<SampleCRUDDatabaseContext> options) : base(options)
+{
+    private readonly IUserService userService;
+
+    public SampleCRUDDatabaseContext(DbContextOptions<SampleCRUDDatabaseContext> options, IUserService userService) : base(options)
     {
+        this.userService = userService;
     }
     public DbSet<Product> Products { get; set; }
 
@@ -28,6 +32,7 @@ public class SampleCRUDDatabaseContext : DbContext
             if (entry is { State : EntityState.Added })
             {
                 entry.Entity.DateCreated = DateTime.Now;
+                entry.Entity.CreatedBy = userService.UserId;
             }
         }
         return base.SaveChangesAsync(cancellationToken);

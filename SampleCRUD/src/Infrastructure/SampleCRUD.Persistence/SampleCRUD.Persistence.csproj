@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\SampleCRUD.Domain\SampleCRUD.Domain.csproj" />
+    <ProjectReference Include="..\SampleCRUD.Identity\SampleCRUD.Identity.csproj" />
   </ItemGroup>
 
 </Project>

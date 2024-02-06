@@ -21,12 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Features\Product\Commands\CreateNewProduct\" />
-    <Folder Include="Features\Product\Queries\GetProducts\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Core\SampleCRUD.Domain\SampleCRUD.Domain.csproj" />
     <ProjectReference Include="..\..\Infrastructure\SampleCRUD.Identity\SampleCRUD.Identity.csproj" />
     <ProjectReference Include="..\..\Infrastructure\SampleCRUD.Persistence\SampleCRUD.Persistence.csproj" />
